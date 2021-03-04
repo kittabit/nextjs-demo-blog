@@ -10,9 +10,21 @@ export default function Home(props) {
         {props.posts.map(function(post, idx) {
           return (
             <li key={idx}>
-              <Link href={'/posts/'+post.slug}>
-                <a>{post.title}</a>
+              <Link href={'/post/'+post.slug}>
+                <a>{post.title}</a> 
               </Link>
+              &nbsp;-&nbsp;
+                <ul>
+                    {post.tags.map(function(tag, index){
+                        return (
+                            <li key={index}>
+                                <Link href={'/posts/'+tag}>
+                                    <a>{tag}</a>
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
             </li>
           )
         })}
