@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport PostLayout from '@layouts/post';\nexport var __N_SSG = true;\nexport default function Post(props) {\n  return /*#__PURE__*/_jsx(PostLayout, {\n    title: props.title,\n    content: props.content,\n    tags: props.tags\n  });\n}","map":null,"metadata":{},"sourceType":"module"}
